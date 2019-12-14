@@ -58,6 +58,14 @@ function updateSubmitButtonState(type) {
   }
 }
 
+function displayOnSubmit(type) {
+  $('#' + type + '-form').on('submit', function (e) {
+    e.preventDefault();
+    var data = $('#' + type + '-form input, #' + type + '-form textarea').serializeArray();
+    console.log(data);
+  });
+}
+
 $('#email-button').on('click', function () {
   activateType('email');
 });
@@ -73,3 +81,6 @@ $('#email-form input, #email-form textarea').on('keydown', function () {
 $('#sms-form input, #sms-form textarea').on('keydown', function () {
   updateSubmitButtonState('sms');
 });
+
+displayOnSubmit('email');
+displayOnSubmit('sms');
