@@ -1,5 +1,5 @@
 body {
-    background-color: #dddddd;
+    background-color: #fafafa;
 }
 
 .modal {
@@ -7,7 +7,8 @@ body {
     min-height: 792px;
     margin: auto;
     background-color: #fff;
-    border: solid 1px #bbbbbb;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
     font-family: sans-serif;
 }
 
@@ -61,10 +62,12 @@ body {
 
 .modal .modal-form textarea {
     min-height: 169px;
+    resize: none;
 }
 .modal .modal-form input,
 .modal .modal-form textarea {
     width: 100%;
+    padding-left: 15px;
 }
 
 .modal .modal-form button[type='button'] {
@@ -76,7 +79,7 @@ body {
 
 .modal .modal-form input::placeholder,
 .modal .modal-form textarea::placeholder {
-    padding: 12px 0 0 15px;
+    padding: 12px 0 0 0;
     font-size: 13px;
     color: #5a6469;
 }
@@ -110,4 +113,26 @@ body {
 .modal .modal-form .actions {
     display: flex;
     justify-content: flex-end;
+}
+
+.modal .modal-form .input-group {
+    display: flex;
+}
+
+.modal .modal-form .input-group input,
+.modal .modal-form .input-group textarea {
+    border-radius: 3px 0px 0px 3px;
+}
+
+.modal .modal-form .input-group .input-group-addon {
+    background: #f4f6f8;
+    border: 1px solid #c4c4c4;
+    border-left: 0;
+    box-sizing: border-box;
+    border-radius: 0px 3px 3px 0px;
+    width: 20px;
+    text-align: center;
+    color: #f83232;
+    padding-top: 5px;
+    font-size: 13px;
 }

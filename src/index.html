@@ -33,29 +33,41 @@
                     <form id="email-form" role="form">
                         <div class="field">
                             <label for="email-email">Email</label>
-                            <input
-                                id="email-email"
-                                type="email"
-                                name="email"
-                                placeholder="janedoe@gmail.com"
-                            />
+                            <div class="input-group">
+                                <input
+                                    id="email-email"
+                                    type="email"
+                                    name="email"
+                                    placeholder="janedoe@gmail.com"
+                                    required
+                                />
+                                <div class="input-group-addon">*</div>
+                            </div>
                         </div>
                         <div class="field">
                             <label for="email-subject">Subject</label>
-                            <input
-                                id="email-subject"
-                                type="text"
-                                name="subject"
-                                placeholder="Demo Subject"
-                            />
+                            <div class="input-group">
+                                <input
+                                    id="email-subject"
+                                    type="text"
+                                    name="subject"
+                                    placeholder="Demo Subject"
+                                    required
+                                />
+                                <div class="input-group-addon">*</div>
+                            </div>
                         </div>
                         <div class="field">
                             <label for="email-message">Message</label>
-                            <textarea
-                                id="email-message"
-                                name="message"
-                                placeholder="Demo Message"
-                            ></textarea>
+                            <div class="input-group">
+                                <textarea
+                                    id="email-message"
+                                    name="message"
+                                    placeholder="Demo Message"
+                                    required
+                                ></textarea>
+                                <div class="input-group-addon">*</div>
+                            </div>
                         </div>
                         <div class="actions">
                             <button role="button" type="submit">
@@ -67,20 +79,28 @@
                     <form id="sms-form" role="form">
                         <div class="field">
                             <label for="sms-telephone">Mobile Number</label>
-                            <input
-                                id="sms-telephone"
-                                type="tel"
-                                name="mobile number"
-                                placeholder="Please enter an email address"
-                            />
+                            <div class="input-group">
+                                <input
+                                    id="sms-telephone"
+                                    type="tel"
+                                    name="mobile number"
+                                    placeholder="Please enter an email address"
+                                    required
+                                />
+                                <div class="input-group-addon">*</div>
+                            </div>
                         </div>
                         <div class="field">
                             <label for="sms-message">Message</label>
-                            <textarea
-                                id="sms-message"
-                                name="message"
-                                placeholder="Your SMS message..."
-                            ></textarea>
+                            <div class="input-group">
+                                <textarea
+                                    id="sms-message"
+                                    name="message"
+                                    placeholder="Your SMS message..."
+                                    required
+                                ></textarea>
+                                <div class="input-group-addon">*</div>
+                            </div>
                         </div>
                         <div class="actions">
                             <button role="button" type="submit">
