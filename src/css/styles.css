@@ -140,8 +140,8 @@ body {
 }
 
 .modal .modal-form button[type='submit']:disabled {
-    background-color: #C4C4C4;
-    border-color: #C4C4C4;
+    background-color: #c4c4c4;
+    border-color: #c4c4c4;
 }
 
 .modal .modal-form button[type='submit'] i {
