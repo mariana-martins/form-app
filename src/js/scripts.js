@@ -1,4 +1,4 @@
-function showType(type) {
+function activateStatus(type) {
   $('#' + type + '-button').addClass('active');
   $('#' + type + '-button').attr('aria-pressed', 'true');
   $('#' + type + '-button i').addClass('fa-check');
@@ -7,7 +7,7 @@ function showType(type) {
   $('#' + type + '-form').attr('aria-hidden', 'false');
 }
 
-function hideType(type) {
+function deactivateStatus(type) {
   $('#' + type + '-button').removeClass('active');
   $('#' + type + '-button').attr('aria-pressed', 'false');
   $('#' + type + '-button i').addClass('fa-times');
@@ -16,12 +16,29 @@ function hideType(type) {
   $('#' + type + '-form').attr('aria-hidden', 'true');
 }
 
+function cleanForm(){
+  $('.modal .modal-form form input').each(function(){
+    $(this).val('');
+  });
+  $('.modal .modal-form form textarea').each(function(){
+    $(this).val('');
+  });
+}
+
+function activateType(type) {
+  var ariaPressedValue = $('#' + type + '-button').attr('aria-pressed');
+  if (ariaPressedValue === 'false') {
+    var hideType = type === 'email' ? 'sms' : 'email';
+    activateStatus(type);
+    deactivateStatus(hideType);
+    cleanForm();
+  }
+}
+
 $('#email-button').on('click', function(){
-  showType('email');
-  hideType('sms');
+  activateType('email');
 });
 
 $('#sms-button').on('click', function(){
-  showType('sms');
-  hideType('email');
+  activateType('sms');
 });
