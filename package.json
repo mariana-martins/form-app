@@ -1,0 +1,26 @@
+{
+  "name": "form-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier \"src/**/*.*\" --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariana-martins/form-app.git"
+  },
+  "author": "Mariana Martins Menezes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariana-martins/form-app/issues"
+  },
+  "homepage": "https://github.com/mariana-martins/form-app#readme",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "1.19.1"
+  }
+}
