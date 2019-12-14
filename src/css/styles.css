@@ -79,11 +79,17 @@ body {
 .modal .modal-form textarea {
     min-height: 169px;
     resize: none;
+    padding-top: 15px;
 }
 .modal .modal-form input,
 .modal .modal-form textarea {
     width: 100%;
     padding-left: 15px;
+}
+
+.modal .modal-form button {
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 .modal .modal-form button[type='button'] {
@@ -109,9 +115,12 @@ body {
 
 .modal .modal-form input::placeholder,
 .modal .modal-form textarea::placeholder {
-    padding: 12px 0 0 0;
     font-size: 13px;
     color: #5a6469;
+}
+
+.modal .modal-form input::placeholder {
+    padding: 12px 0 0 0;
 }
 
 .modal .modal-form .fas {
@@ -123,12 +132,16 @@ body {
     background: #009fcc;
     border: 1px solid #009fcc;
     box-sizing: border-box;
-    border-radius: 3px;
     color: #fff;
     font-size: 11px;
     line-height: 14px;
     width: 131px;
     height: 44px;
+}
+
+.modal .modal-form button[type='submit']:disabled {
+    background-color: #C4C4C4;
+    border-color: #C4C4C4;
 }
 
 .modal .modal-form button[type='submit'] i {
