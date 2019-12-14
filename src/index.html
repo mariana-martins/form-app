@@ -9,24 +9,30 @@
         <meta name="author" content="Mariana Martins Menezes" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        <link rel="stylesheet" href="css/fontawesome/css/all.css?v=5.12.0" />
         <link rel="stylesheet" href="css/styles.css?v=1.0" />
     </head>
     <body>
         <main>
             <section class="modal">
-                <nav><span>Jane Doe</span></nav>
+                <nav>
+                  <span>Jane Doe</span>
+                  <i class="fas fa-times"></i>
+                </nav>
                 <div class="modal-form">
                     <div class="field toggle">
                         <label>Send Message</label>
                         <button role="button" aria-pressed="true" type="button">
-                            Email
+                            <span>Email</span>
+                            <i class="fas fa-check"></i>
                         </button>
                         <button
                             role="button"
                             aria-pressed="false"
                             type="button"
                         >
-                            SMS
+                            <span>SMS</span>
+                            <i class="fas fa-times"></i>
                         </button>
                     </div>
 
@@ -71,7 +77,7 @@
                         </div>
                         <div class="actions">
                             <button role="button" type="submit">
-                                Send Email
+                                <i class="fas fa-envelope"></i> Send Email
                             </button>
                         </div>
                     </form>
@@ -104,7 +110,8 @@
                         </div>
                         <div class="actions">
                             <button role="button" type="submit">
-                                Send SMS
+                                <i class="fas fa-envelope"></i>
+                                <span>Send SMS</span>
                             </button>
                         </div>
                     </form>

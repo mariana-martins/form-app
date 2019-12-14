@@ -1,5 +1,8 @@
 body {
     background-color: #fafafa;
+    font-size: 13px;
+    font-family: sans-serif;
+    margin: 0;
 }
 
 .modal {
@@ -9,7 +12,6 @@ body {
     background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
-    font-family: sans-serif;
 }
 
 .modal nav {
@@ -19,12 +21,22 @@ body {
     color: #fff;
     text-align: center;
     line-height: 56px;
+    position: relative;
 }
 
 .modal nav span {
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
+}
+
+.modal nav i {
+    font-size: 18px;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    position: absolute;
+    right: 0px;
 }
 
 .modal .modal-form {
@@ -77,11 +89,26 @@ body {
     color: #5a6469;
 }
 
+.modal .modal-form .fa-check {
+    color: #2aa43c;
+    float: right;
+}
+
+.modal .modal-form .fa-times {
+    color: #cccccc;
+    float: right;
+}
+
 .modal .modal-form input::placeholder,
 .modal .modal-form textarea::placeholder {
     padding: 12px 0 0 0;
     font-size: 13px;
     color: #5a6469;
+}
+
+.modal .modal-form .fas {
+    font-size: 15px;
+    padding-right: 10px;
 }
 
 .modal .modal-form button[type='submit'] {
@@ -94,6 +121,13 @@ body {
     line-height: 14px;
     width: 131px;
     height: 44px;
+}
+
+.modal .modal-form button[type='submit'] i {
+    vertical-align: middle;
+}
+.modal .modal-form button[type='submit'] span {
+    vertical-align: middle;
 }
 
 .modal .modal-form .toggle {
@@ -135,4 +169,17 @@ body {
     color: #f83232;
     padding-top: 5px;
     font-size: 13px;
+}
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .modal .modal-form {
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .modal nav span {
+        font-size: 16px;
+    }
 }
