@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 .modal {
     max-width: 768px;
     min-height: 792px;
@@ -97,6 +101,10 @@ body {
 .modal .modal-form .fa-times {
     color: #cccccc;
     float: right;
+}
+
+.modal .modal-form .active {
+    background: #E9FAFF;
 }
 
 .modal .modal-form input::placeholder,

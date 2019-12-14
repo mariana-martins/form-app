@@ -16,17 +16,24 @@
         <main>
             <section class="modal">
                 <nav>
-                  <span>Jane Doe</span>
-                  <i class="fas fa-times"></i>
+                    <span>Jane Doe</span>
+                    <i class="fas fa-times"></i>
                 </nav>
                 <div class="modal-form">
                     <div class="field toggle">
                         <label>Send Message</label>
-                        <button role="button" aria-pressed="true" type="button">
+                        <button
+                            id="email-button"
+                            role="button"
+                            aria-pressed="true"
+                            type="button"
+                            class="active"
+                        >
                             <span>Email</span>
                             <i class="fas fa-check"></i>
                         </button>
                         <button
+                            id="sms-button"
                             role="button"
                             aria-pressed="false"
                             type="button"
@@ -36,7 +43,7 @@
                         </button>
                     </div>
 
-                    <form id="email-form" role="form">
+                    <form id="email-form" role="form" aria-hidden="false">
                         <div class="field">
                             <label for="email-email">Email</label>
                             <div class="input-group">
@@ -44,7 +51,7 @@
                                     id="email-email"
                                     type="email"
                                     name="email"
-                                    placeholder="janedoe@gmail.com"
+                                    placeholder="Email Address"
                                     required
                                 />
                                 <div class="input-group-addon">*</div>
@@ -57,7 +64,7 @@
                                     id="email-subject"
                                     type="text"
                                     name="subject"
-                                    placeholder="Demo Subject"
+                                    placeholder="Email Subject"
                                     required
                                 />
                                 <div class="input-group-addon">*</div>
@@ -69,7 +76,7 @@
                                 <textarea
                                     id="email-message"
                                     name="message"
-                                    placeholder="Demo Message"
+                                    placeholder="Your email message..."
                                     required
                                 ></textarea>
                                 <div class="input-group-addon">*</div>
@@ -82,7 +89,12 @@
                         </div>
                     </form>
 
-                    <form id="sms-form" role="form">
+                    <form
+                        id="sms-form"
+                        role="form"
+                        hidden="true"
+                        aria-hidden="true"
+                    >
                         <div class="field">
                             <label for="sms-telephone">Mobile Number</label>
                             <div class="input-group">
@@ -118,6 +130,7 @@
                 </div>
             </section>
         </main>
+        <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
