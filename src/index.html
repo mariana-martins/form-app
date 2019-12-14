@@ -14,51 +14,79 @@
     <body>
         <main>
             <section class="modal">
-                <nav>Jane Doe</nav>
+                <nav><span>Jane Doe</span></nav>
                 <div class="modal-form">
-                    <label>Send Message</label>
-                    <button role="button" aria-pressed="true">Email</button>
-                    <button role="button" aria-pressed="false">SMS</button>
+                    <div class="field toggle">
+                        <label>Send Message</label>
+                        <button role="button" aria-pressed="true" type="button">
+                            Email
+                        </button>
+                        <button
+                            role="button"
+                            aria-pressed="false"
+                            type="button"
+                        >
+                            SMS
+                        </button>
+                    </div>
 
                     <form id="email-form" role="form">
-                        <label for="email-email">Email</label>
-                        <input
-                            id="email-email"
-                            type="email"
-                            name="email"
-                            placeholder="janedoe@gmail.com"
-                        />
-                        <label for="email-subject">Subject</label>
-                        <input
-                            id="email-subject"
-                            type="text"
-                            name="subject"
-                            placeholder="Demo Subject"
-                        />
-                        <label for="email-message">Message</label>
-                        <textarea
-                            id="email-message"
-                            name="message"
-                            placeholder="Demo Message"
-                        ></textarea>
-                        <button role="button" type="submit">Send Email</button>
+                        <div class="field">
+                            <label for="email-email">Email</label>
+                            <input
+                                id="email-email"
+                                type="email"
+                                name="email"
+                                placeholder="janedoe@gmail.com"
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="email-subject">Subject</label>
+                            <input
+                                id="email-subject"
+                                type="text"
+                                name="subject"
+                                placeholder="Demo Subject"
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="email-message">Message</label>
+                            <textarea
+                                id="email-message"
+                                name="message"
+                                placeholder="Demo Message"
+                            ></textarea>
+                        </div>
+                        <div class="actions">
+                            <button role="button" type="submit">
+                                Send Email
+                            </button>
+                        </div>
                     </form>
 
                     <form id="sms-form" role="form">
-                        <label for="sms-telephone">Mobile Number</label>
-                        <input
-                            id="sms-telephone"
-                            type="tel"
-                            name="mobile number"
-                            placeholder="Please enter an email address"
-                        />
-                        <label for="sms-message">Message</label>
-                        <textarea
-                            id="sms-message"
-                            name="message"
-                            placeholder="Your SMS message..."
-                        ></textarea>
-                        <button role="button" type="submit">Send SMS</button>
+                        <div class="field">
+                            <label for="sms-telephone">Mobile Number</label>
+                            <input
+                                id="sms-telephone"
+                                type="tel"
+                                name="mobile number"
+                                placeholder="Please enter an email address"
+                            />
+                        </div>
+                        <div class="field">
+                            <label for="sms-message">Message</label>
+                            <textarea
+                                id="sms-message"
+                                name="message"
+                                placeholder="Your SMS message..."
+                            ></textarea>
+                        </div>
+                        <div class="actions">
+                            <button role="button" type="submit">
+                                Send SMS
+                            </button>
+                        </div>
                     </form>
                 </div>
             </section>

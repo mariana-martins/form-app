@@ -1,0 +1,113 @@
+body {
+    background-color: #dddddd;
+}
+
+.modal {
+    max-width: 768px;
+    min-height: 792px;
+    margin: auto;
+    background-color: #fff;
+    border: solid 1px #bbbbbb;
+    font-family: sans-serif;
+}
+
+.modal nav {
+    height: 56px;
+    width: 100%;
+    background-color: #0096c2;
+    color: #fff;
+    text-align: center;
+    line-height: 56px;
+}
+
+.modal nav span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.modal .modal-form {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.modal .modal-form .field {
+    margin-bottom: 30px;
+}
+
+.modal .modal-form label {
+    display: block;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.modal .modal-form input,
+.modal .modal-form button[type='button'],
+.modal .modal-form textarea {
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    backdrop-filter: blur(41px);
+}
+
+.modal .modal-form input,
+.modal .modal-form button[type='button'] {
+    height: 44px;
+}
+
+.modal .modal-form textarea {
+    min-height: 169px;
+}
+.modal .modal-form input,
+.modal .modal-form textarea {
+    width: 100%;
+}
+
+.modal .modal-form button[type='button'] {
+    padding-left: 15px;
+    text-align: left;
+    font-size: 13px;
+    color: #5a6469;
+}
+
+.modal .modal-form input::placeholder,
+.modal .modal-form textarea::placeholder {
+    padding: 12px 0 0 15px;
+    font-size: 13px;
+    color: #5a6469;
+}
+
+.modal .modal-form button[type='submit'] {
+    background: #009fcc;
+    border: 1px solid #009fcc;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 14px;
+    width: 131px;
+    height: 44px;
+}
+
+.modal .modal-form .toggle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.modal .modal-form .toggle label {
+    flex-basis: 100%;
+}
+
+.modal .modal-form .toggle button {
+    flex-basis: calc(50% - 5px);
+}
+
+.modal .modal-form .actions {
+    display: flex;
+    justify-content: flex-end;
+}
