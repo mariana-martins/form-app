@@ -1,18 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8" />
 
-  <title>Form App</title>
-  <meta name="description" content="Form App">
-  <meta name="author" content="Mariana Martins Menezes">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Form App</title>
+        <meta name="description" content="Form App" />
+        <meta name="author" content="Mariana Martins Menezes" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <link rel="stylesheet" href="css/styles.css?v=1.0" />
+    </head>
+    <body>
+        <main>
+            <section class="modal">
+                <nav>Jane Doe</nav>
+                <div class="modal-form">
+                    <label>Send Message</label>
+                    <button role="button" aria-pressed="true">Email</button>
+                    <button role="button" aria-pressed="false">SMS</button>
 
-</head>
-<body>
-  <script src="js/scripts.js"></script>
-</body>
+                    <form id="email-form" role="form">
+                        <label for="email-email">Email</label>
+                        <input
+                            id="email-email"
+                            type="email"
+                            name="email"
+                            placeholder="janedoe@gmail.com"
+                        />
+                        <label for="email-subject">Subject</label>
+                        <input
+                            id="email-subject"
+                            type="text"
+                            name="subject"
+                            placeholder="Demo Subject"
+                        />
+                        <label for="email-message">Message</label>
+                        <textarea
+                            id="email-message"
+                            name="message"
+                            placeholder="Demo Message"
+                        ></textarea>
+                        <button role="button" type="submit">Send Email</button>
+                    </form>
+
+                    <form id="sms-form" role="form">
+                        <label for="sms-telephone">Mobile Number</label>
+                        <input
+                            id="sms-telephone"
+                            type="tel"
+                            name="mobile number"
+                            placeholder="Please enter an email address"
+                        />
+                        <label for="sms-message">Message</label>
+                        <textarea
+                            id="sms-message"
+                            name="message"
+                            placeholder="Your SMS message..."
+                        ></textarea>
+                        <button role="button" type="submit">Send SMS</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
