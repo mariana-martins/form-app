@@ -9,6 +9,12 @@ body {
     display: none !important;
 }
 
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
 .modal {
     max-width: 768px;
     min-height: 792px;
@@ -97,6 +103,7 @@ body {
     text-align: left;
     font-size: 13px;
     color: #5a6469;
+    transition: background-color 0.5s ease 0s;
 }
 
 .modal .modal-form .fa-check {
@@ -137,6 +144,7 @@ body {
     line-height: 14px;
     width: 131px;
     height: 44px;
+    transition: background-color 0.8s ease 0s;
 }
 
 .modal .modal-form button[type='submit']:disabled {
@@ -190,6 +198,16 @@ body {
     color: #f83232;
     padding-top: 5px;
     font-size: 13px;
+}
+
+.modal .modal-form .input-group:hover input,
+.modal .modal-form .input-group:focus input,
+.modal .modal-form .input-group:hover textarea,
+.modal .modal-form .input-group:focus textarea,
+.modal .modal-form .input-group:hover .input-group-addon,
+.modal .modal-form .input-group:focus .input-group-addon,
+.modal .modal-form button[type='button']:hover {
+    border-color: #a4a4a4;
 }
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
