@@ -137,7 +137,6 @@ textarea:focus {
 
 .modal .modal-form button[type='submit'] {
     background: #009fcc;
-    border: 1px solid #009fcc;
     box-sizing: border-box;
     color: #fff;
     font-size: 11px;
@@ -149,7 +148,6 @@ textarea:focus {
 
 .modal .modal-form button[type='submit']:disabled {
     background-color: #c4c4c4;
-    border-color: #c4c4c4;
 }
 
 .modal .modal-form button[type='submit'] i {

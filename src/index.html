@@ -27,7 +27,6 @@
                         <label>Send Message</label>
                         <button
                             id="email-button"
-                            role="button"
                             aria-pressed="true"
                             type="button"
                             class="active"
@@ -37,7 +36,6 @@
                         </button>
                         <button
                             id="sms-button"
-                            role="button"
                             aria-pressed="false"
                             type="button"
                         >
@@ -46,7 +44,7 @@
                         </button>
                     </div>
 
-                    <form id="email-form" role="form" aria-hidden="false">
+                    <form id="email-form" aria-hidden="false">
                         <div class="field">
                             <label for="email-email">Email</label>
                             <div class="input-group">
@@ -86,7 +84,7 @@
                             </div>
                         </div>
                         <div class="actions">
-                            <button role="button" type="submit" disabled>
+                            <button type="submit" disabled>
                                 <i class="fas fa-envelope"></i> Send Email
                             </button>
                         </div>
@@ -94,7 +92,6 @@
 
                     <form
                         id="sms-form"
-                        role="form"
                         hidden="true"
                         aria-hidden="true"
                     >
@@ -116,7 +113,6 @@
                             <div class="input-group">
                                 <textarea
                                     id="sms-message"
-                                    type="text"
                                     name="message"
                                     placeholder="Your SMS message..."
                                     required
@@ -125,7 +121,7 @@
                             </div>
                         </div>
                         <div class="actions">
-                            <button role="button" type="submit" disabled>
+                            <button type="submit" disabled>
                                 <i class="fas fa-envelope"></i>
                                 <span>Send SMS</span>
                             </button>
