@@ -20,12 +20,10 @@ function deactivateStatus(type) {
 
 // Clean all form fields
 function cleanForm() {
-    $('.modal .modal-form form input').each(function() {
-        $(this).val('');
-    });
-    $('.modal .modal-form form textarea').each(function() {
-        $(this).val('');
-    });
+    $('.modal .modal-form form input, .modal .modal-form form textarea')
+        .each(function () {
+            $(this).val('');
+        });
 }
 
 // Activate on type and deactivate the opposite type
@@ -38,23 +36,15 @@ function activateType(type) {
         activateStatus(type);
         deactivateStatus(hideType);
         cleanForm();
+        // update submit button after cleaning current form
+        updateSubmitButtonState(type);
     }
 }
 
-// Checks if the field is empty
-function isEmptyField(field) {
-    return $(field).val() === '';
-}
-
-// Validate if all fields from a form are filled
+// Validate if all fields from a form are valid
 function isFormValid(formId) {
-    var valid = true;
-    $('#' + formId + ' input, #' + formId + ' textarea').each(function() {
-        if (isEmptyField(this)) {
-            valid = false;
-        }
-    });
-    return valid;
+    var selector = '#' + formId + ' input:invalid, #' + formId + ' textarea:invalid';
+    return document.querySelectorAll(selector).length === 0
 }
 
 // Activate or deactivate the submit button based on the state of the form.
@@ -62,16 +52,17 @@ function isFormValid(formId) {
 // activated.
 function updateSubmitButtonState(type) {
     var formId = type + '-form';
+    var selector = '#' + formId + ' button[type=submit]';
     if (isFormValid(formId)) {
-        $('#' + formId + ' button[type=submit]').removeAttr('disabled');
+        $(selector).removeAttr('disabled');
     } else {
-        $('#' + formId + ' button[type=submit]').attr('disabled', 'true');
+        $(selector).attr('disabled', 'true');
     }
 }
 
 // Display the data from the form on browser console when the form is submitted
 function displayOnSubmit(type) {
-    $('#' + type + '-form').on('submit', function(e) {
+    $('#' + type + '-form').on('submit', function (e) {
         // it prevents propagation as we only want to print form data on console
         e.preventDefault();
         var data = $(
@@ -83,21 +74,21 @@ function displayOnSubmit(type) {
 
 // init form
 // - add click event to #email-button
-$('#email-button').on('click', function() {
+$('#email-button').on('click', function () {
     activateType('email');
 });
 // - add click event to #sms-button
-$('#sms-button').on('click', function() {
+$('#sms-button').on('click', function () {
     activateType('sms');
 });
 // - add keydown event to #email-form fields
 //   enable/disable submit button based on form
-$('#email-form input, #email-form textarea').on('keydown', function() {
+$('#email-form input, #email-form textarea').on('keyup', function () {
     updateSubmitButtonState('email');
 });
 // - add keydown event to #sms-form fields
 //   enable/disable submit button based on form
-$('#sms-form input, #sms-form textarea').on('keydown', function() {
+$('#sms-form input, #sms-form textarea').on('keyup', function () {
     updateSubmitButtonState('sms');
 });
 // - ensure it print on console form data on submit event
